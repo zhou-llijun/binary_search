@@ -4,6 +4,9 @@ int n;
 int k;
 int A[100000];
 
+int p(int m){
+  return A[m] < k ? 0 : 1;
+}
 
 int main(){
   int i, lb, ub;
@@ -14,5 +17,17 @@ int main(){
 
 
 
+  lb = -1;
+  ub = n;
+  while(ub - lb > 1) {
+    int m = (lb + ub) / 2;
+    if(p(m)){
+      ub = m;
+    }
+    else {
+      lb = m;
+    }
+  }
+  printf("%d\n", ub);
   return 0;
 }
