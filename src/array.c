@@ -5,7 +5,7 @@ int k;
 int A[100000];
 
 int p(int m){
-  return A[m] < k ? 0 : 1;
+  return A[m] >= k;
 }
 
 int main(){
