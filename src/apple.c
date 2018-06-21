@@ -11,7 +11,7 @@ int p(int m){
   	q += A[i] / m;
 	if(A[i] % m != 0) ++q; 
   }
-  return k < q ? 0 : 1;		/* 0: cannot bring back; 1: can bring back*/
+  return k < q ? 0 : 1;		/* 0: cannot bring back; 1: can bring back */
 }
 
 int main(){
